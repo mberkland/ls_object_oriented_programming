@@ -36,8 +36,9 @@ class MyCar
     "The car was made in #{self.year}"
   end
 
-  def brake
-    "Hitting the brakes"
+  def brake(decrease)
+    self.speed -= decrease
+    "The new speed is #{self.speed}"
   end
 
   def off
@@ -55,7 +56,7 @@ end
 
 gypsy = MyCar.new(2002, "blue", "volvo")
 p gypsy.speed_up(20)
-p gypsy.brake
+p gypsy.brake(10)
 p gypsy.off
 p gypsy.display_year
 gypsy.spray_paint
